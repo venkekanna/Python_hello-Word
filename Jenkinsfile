@@ -1,10 +1,14 @@
 pipeline {
     agent any
 
+    environment {
+        APP_DIR = 'python-hello'
+    }
+
     stages {
         stage('Clone Code') {
             steps {
-                git credentialsId: 'github-token', url: 'https://github.com/your-username/python-hello-app.git'
+                git url: 'https://github.com/venkekanna/Python_hello-Word.git'
             }
         }
 
